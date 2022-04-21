@@ -1,10 +1,10 @@
 // export {Configuration} from "./quiz-configuration/configuration";
-export {Question} from "./questionnaire/question";
-export {Questionnaire} from "./questionnaire/questionnaire";
-export {QuestionnairePresenter} from "./questionnaire/questionnairePresenter"
-export {QuestionnaireView} from "./questionnaire/questionnaireView";
+export {Question} from "./questionnaire";
+export {Questionnaire} from "./questionnaire";
+export {QuestionnairePresenter} from "./questionnaire"
+export {QuestionnaireView} from "./questionnaire";
 
-export type {AnswerViewModel} from "./questionnaire/types/answerViewModel"
-export type {QuestionnaireLogic} from "./questionnaire/types/questionnaireLogic"
-export type {QuestionProperties} from "./questionnaire/types/questionProperties"
-export type {QuestionResult} from "./questionnaire/types/questionResult"
+export type {AnswerViewModel} from "./questionnaire"
+export type {QuestionnaireLogic} from "./questionnaire"
+export type {QuestionProperties} from "./questionnaire"
+export type {QuestionResult} from "./questionnaire"
