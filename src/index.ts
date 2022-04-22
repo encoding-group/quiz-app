@@ -21,3 +21,7 @@ export {
 export {
     EvenlyDistributedByGroup
 } from "./infrastructure/services"
+
+export {
+    QuestionnaireViewDto
+} from "./interface/questionnaireView.dto"

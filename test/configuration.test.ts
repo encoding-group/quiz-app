@@ -1,9 +1,9 @@
 import {
-    Questionnaire,
-    QuestionnaireView,
     Question,
     QuestionProps,
-    QuestionnairePresenter
+    Questionnaire,
+    QuestionnaireView,
+    QuestionnairePresenter,
 } from "../src";
 import {MockProxy, mock} from "jest-mock-extended";
 

@@ -27,6 +27,9 @@ var QuestionsRepository = /** @class */ (function () {
     function QuestionsRepository(context) {
         this._context = context;
     }
+    QuestionsRepository.prototype.restore = function () {
+        this._context.restore();
+    };
     QuestionsRepository.prototype.deleteById = function (id) {
         this._context.deleteQuestionById(id);
     };

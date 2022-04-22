@@ -1,7 +1,8 @@
 import { AnswerViewModel } from "./index";
 export interface QuestionnaireView {
-    updateAllowNext(allowNext: boolean): void;
     updateAnswers(answers: AnswerViewModel[]): void;
-    updateCorrectAnsweredCount(correctlyAnsweredCount: number): void;
+    updateScore(score: number): void;
     updateTitle(title: string): void;
+    updateQuestionnaireStatus(status: "pending" | "success" | "failed"): void;
+    updateUserAction(action: "pending" | "confirm" | "next" | "success" | "failed"): void;
 }

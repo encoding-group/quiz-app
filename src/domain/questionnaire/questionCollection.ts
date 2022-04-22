@@ -1,5 +1,5 @@
-import {QuestionProps} from "../../index";
+import {Question} from "./question";
 
 export interface QuestionCollection {
-    asArray(): QuestionProps[];
+    asArray(): Question[];
 }

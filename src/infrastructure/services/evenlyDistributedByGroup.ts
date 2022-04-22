@@ -1,4 +1,4 @@
-import {QuestionCollection} from "../../domain/questionnaire";
+import {Question, QuestionCollection} from "../../domain/questionnaire";
 import {QuestionProps, QuestionsRepository} from "../../";
 
 export class EvenlyDistributedByGroup implements QuestionCollection {
@@ -8,7 +8,7 @@ export class EvenlyDistributedByGroup implements QuestionCollection {
         this._repository = repository;
     }
 
-    asArray(): QuestionProps[] {
+    asArray(): Question[] {
         const groups = this._repository.getCategories()
             .sort(() => (Math.random() > .5) ? 1 : -1);
 
@@ -26,6 +26,8 @@ export class EvenlyDistributedByGroup implements QuestionCollection {
             });
         }
 
-        return questions;
+        this._repository.restore();
+
+        return questions.map((props: QuestionProps) => new Question(props));
     }
 }

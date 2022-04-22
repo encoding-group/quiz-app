@@ -8,6 +8,10 @@ export class QuestionsRepository {
         this._context = context;
     }
 
+    restore(): void {
+        this._context.restore();
+    }
+
     deleteById(id: number): void {
         this._context.deleteQuestionById(id);
     }

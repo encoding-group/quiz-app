@@ -6,8 +6,8 @@ var Answer = /** @class */ (function () {
     Object.defineProperty(Answer.prototype, "isCorrect", {
         get: function () {
             if (this._correctAnswerIndex < 0 || this._givenAnswerIndex < 0)
-                return false;
-            return this._correctAnswerIndex === this._givenAnswerIndex;
+                return "pending";
+            return this._correctAnswerIndex === this._givenAnswerIndex ? "yes" : "no";
         },
         enumerable: false,
         configurable: true

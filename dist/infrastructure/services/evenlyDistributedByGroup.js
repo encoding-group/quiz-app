@@ -1,3 +1,4 @@
+import { Question } from "../../domain/questionnaire";
 var EvenlyDistributedByGroup = /** @class */ (function () {
     function EvenlyDistributedByGroup(repository) {
         this._repository = repository;
@@ -17,7 +18,8 @@ var EvenlyDistributedByGroup = /** @class */ (function () {
                 }
             });
         }
-        return questions;
+        this._repository.restore();
+        return questions.map(function (props) { return new Question(props); });
     };
     return EvenlyDistributedByGroup;
 }());

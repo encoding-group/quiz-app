@@ -20,7 +20,8 @@ export class QuestionnairePresenter {
 
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
-        this._ui.updateCorrectAnsweredCount(this.correctAnswersCount);
+        this._ui.updateScore(this.score);
+        this._ui.updateUserAction("pending");
     }
 
     public nextQuestion(): void {
@@ -36,7 +37,7 @@ export class QuestionnairePresenter {
 
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
-        this._ui.updateAllowNext(false);
+        this._ui.updateUserAction("pending");
     }
 
     public selectAnswer(answerIndex: number): void {
@@ -51,6 +52,7 @@ export class QuestionnairePresenter {
         });
 
         this._ui.updateAnswers(answers);
+        this._ui.updateUserAction("confirm");
     }
 
     public confirmAnswer(): void {
@@ -70,15 +72,14 @@ export class QuestionnairePresenter {
             }
         });
 
+        this._ui.updateQuestionnaireStatus(this._questionnaire.status);
+        this._ui.updateUserAction(this._questionnaire.status === "pending" ? "next" : this._questionnaire.status);
         this._ui.updateAnswers(answers);
-        this._ui.updateCorrectAnsweredCount(this.correctAnswersCount);
-        this._ui.updateAllowNext(true);
+        this._ui.updateScore(this.score);
     }
 
-    private get correctAnswersCount(): number {
-        return this._questionnaire.allQuestions
-            .filter(question => question.answer.isCorrect)
-            .length;
+    private get score(): number {
+        return this._questionnaire.score;
     }
 
     private get currentQuestion(): Question {

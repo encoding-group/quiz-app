@@ -1,5 +1,13 @@
-import {EvenlyDistributedByGroup, QuestionsRepository, YamlQuestionsDataContext} from "../src";
+import {
+    EvenlyDistributedByGroup,
+    Question,
+    Questionnaire,
+    QuestionnairePresenter,
+    QuestionsRepository,
+    YamlQuestionsDataContext
+} from "../src";
 import {readFileSync} from "fs";
+import {QuestionnaireRules} from "../dist";
 
 describe('persistence', () => {
     test('parser', () => {
@@ -7,8 +15,13 @@ describe('persistence', () => {
         const context = new YamlQuestionsDataContext(content);
         const repository = new QuestionsRepository(context);
         const collection = new EvenlyDistributedByGroup(repository);
-
-        console.log(collection.asArray().map(q => q.category));
+        const rules: QuestionnaireRules = {
+            correctAnswersMinimum: 5,
+            incorrectAnswersMaximum: 3
+        }
+        const questionnaire = new Questionnaire(rules, collection.asArray());
+        // const presenter = new QuestionnairePresenter(questionnaire, mockUi);
+        // presenter.start();
     });
 });
 

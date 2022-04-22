@@ -13,7 +13,8 @@ var QuestionnairePresenter = /** @class */ (function () {
         });
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
-        this._ui.updateCorrectAnsweredCount(this.correctAnswersCount);
+        this._ui.updateScore(this.score);
+        this._ui.updateUserAction("pending");
     };
     QuestionnairePresenter.prototype.nextQuestion = function () {
         this._questionnaire.next();
@@ -26,7 +27,7 @@ var QuestionnairePresenter = /** @class */ (function () {
         });
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
-        this._ui.updateAllowNext(false);
+        this._ui.updateUserAction("pending");
     };
     QuestionnairePresenter.prototype.selectAnswer = function (answerIndex) {
         this._questionnaire.selectAnswer(answerIndex);
@@ -38,6 +39,7 @@ var QuestionnairePresenter = /** @class */ (function () {
             };
         });
         this._ui.updateAnswers(answers);
+        this._ui.updateUserAction("confirm");
     };
     QuestionnairePresenter.prototype.confirmAnswer = function () {
         var _this = this;
@@ -54,15 +56,14 @@ var QuestionnairePresenter = /** @class */ (function () {
                     : ''
             };
         });
+        this._ui.updateQuestionnaireStatus(this._questionnaire.status);
+        this._ui.updateUserAction(this._questionnaire.status === "pending" ? "next" : this._questionnaire.status);
         this._ui.updateAnswers(answers);
-        this._ui.updateCorrectAnsweredCount(this.correctAnswersCount);
-        this._ui.updateAllowNext(true);
+        this._ui.updateScore(this.score);
     };
-    Object.defineProperty(QuestionnairePresenter.prototype, "correctAnswersCount", {
+    Object.defineProperty(QuestionnairePresenter.prototype, "score", {
         get: function () {
-            return this._questionnaire.allQuestions
-                .filter(function (question) { return question.answer.isCorrect; })
-                .length;
+            return this._questionnaire.score;
         },
         enumerable: false,
         configurable: true

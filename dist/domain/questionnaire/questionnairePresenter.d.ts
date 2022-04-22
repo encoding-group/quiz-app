@@ -7,7 +7,7 @@ export declare class QuestionnairePresenter {
     nextQuestion(): void;
     selectAnswer(answerIndex: number): void;
     confirmAnswer(): void;
-    private get correctAnswersCount();
+    private get score();
     private get currentQuestion();
     private get currentAnswer();
 }

@@ -7,11 +7,11 @@ export class Answer {
         this._correctAnswerIndex = correctAnswerIndex;
     }
 
-    public get isCorrect(): boolean {
+    public get isCorrect(): "pending" | "yes" | "no" {
         if (this._correctAnswerIndex < 0 || this._givenAnswerIndex < 0)
-            return false;
+            return "pending";
 
-        return this._correctAnswerIndex === this._givenAnswerIndex;
+        return this._correctAnswerIndex === this._givenAnswerIndex ? "yes" : "no";
     }
 
     public get given(): number {
