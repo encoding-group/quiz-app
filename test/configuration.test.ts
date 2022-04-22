@@ -2,9 +2,10 @@ import {
     Questionnaire,
     QuestionnaireView,
     Question,
+    QuestionProps,
     QuestionnairePresenter
 } from "../src";
-import {MockProxy, mock, anyString, anyArray} from "jest-mock-extended";
+import {MockProxy, mock} from "jest-mock-extended";
 
 describe('configuration dto', () => {
     let questionnaire: Questionnaire;
@@ -13,38 +14,17 @@ describe('configuration dto', () => {
     beforeEach(() => {
         mockUi = mock<QuestionnaireView>();
 
-        const questions: Question[] = [
-            {
-                title: 'Question 1',
-                correctAnswerIndex: 0,
-                answers: ['Answer 1', 'Answer 2']
-            },
-            {
-                title: 'Question 2',
-                correctAnswerIndex: 1,
-                answers: ['Answer 1', 'Answer 2']
-            },
-            {
-                title: 'Question 3',
-                correctAnswerIndex: 1,
-                answers: ['Answer 1', 'Answer 2']
-            },
-            {
-                title: 'Question 4',
-                correctAnswerIndex: 1,
-                answers: ['Answer 1', 'Answer 2']
-            },
-            {
-                title: 'Question 5',
-                correctAnswerIndex: 1,
-                answers: ['Answer 1', 'Answer 2']
-            },
-            {
-                title: 'Question 6',
-                correctAnswerIndex: 1,
-                answers: ['Answer 1', 'Answer 2']
-            },
-        ].map(props => new Question(props));
+        const questions: Question[] = [1,2,3,4,5,6]
+            .map((id: number): QuestionProps => {
+                return {
+                    id,
+                    title: `Question ${id}`,
+                    category: `Category ${id % 3}`,
+                    correctAnswerIndex: id % 2,
+                    answers: ['Answer 1', 'Answer 2']
+                }
+            })
+            .map((props: QuestionProps) => new Question(props));
 
         const logic = {
             groupInstruction: true,
@@ -70,7 +50,7 @@ describe('configuration dto', () => {
 
         expect(mockUi.updateAnswers).toHaveBeenCalledTimes(2);
     });
-    //
+
     // test('should confirm the answer of the first question', () => {
     //     questionnaire.start();
     //

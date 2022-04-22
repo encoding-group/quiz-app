@@ -1,0 +1,24 @@
+var Answer = /** @class */ (function () {
+    function Answer(givenAnswerIndex, correctAnswerIndex) {
+        this._givenAnswerIndex = givenAnswerIndex;
+        this._correctAnswerIndex = correctAnswerIndex;
+    }
+    Object.defineProperty(Answer.prototype, "isCorrect", {
+        get: function () {
+            if (this._correctAnswerIndex < 0 || this._givenAnswerIndex < 0)
+                return false;
+            return this._correctAnswerIndex === this._givenAnswerIndex;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Answer.prototype, "given", {
+        get: function () {
+            return this._givenAnswerIndex;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Answer;
+}());
+export { Answer };

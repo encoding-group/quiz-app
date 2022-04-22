@@ -1,4 +1,4 @@
-export { Configuration } from "./quiz-configuration/configuration";
-export { Questionnaire } from "./questionnaire/questionnaire";
-export { QuestionnairePresenter } from "./questionnaire/questionnairePresenter";
-export { Question } from "./questionnaire/question";
+// export {Configuration} from "./quiz-configuration/configuration";
+export { Question, Questionnaire, QuestionnairePresenter } from "./domain/questionnaire";
+export { QuestionsRepository, YamlQuestionsDataContext } from "./infrastructure/persistence";
+export { EvenlyDistributedByGroup } from "./infrastructure/services";

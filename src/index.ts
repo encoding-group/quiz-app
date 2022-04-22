@@ -1,10 +1,23 @@
 // export {Configuration} from "./quiz-configuration/configuration";
-export {Question} from "./questionnaire";
-export {Questionnaire} from "./questionnaire";
-export {QuestionnairePresenter} from "./questionnaire"
-export {QuestionnaireView} from "./questionnaire";
+export {
+    Question,
+    Questionnaire,
+    QuestionnairePresenter,
+    QuestionnaireView
+} from "./domain/questionnaire";
 
-export type {AnswerViewModel} from "./questionnaire"
-export type {QuestionnaireLogic} from "./questionnaire"
-export type {QuestionProperties} from "./questionnaire"
-export type {QuestionResult} from "./questionnaire"
+export type {
+    Answer,
+    AnswerViewModel,
+    QuestionnaireRules,
+    QuestionProps
+} from "./domain/questionnaire";
+
+export {
+    QuestionsRepository,
+    YamlQuestionsDataContext
+} from "./infrastructure/persistence";
+
+export {
+    EvenlyDistributedByGroup
+} from "./infrastructure/services"
