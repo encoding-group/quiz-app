@@ -52,14 +52,29 @@ var QuestionnairePresenter = /** @class */ (function () {
                     : 'default',
                 text: choice.text,
                 label: currentQuestion.answer.given === index
-                    ? (choice.isCorrect ? 'Correct' : 'Incorrect')
+                    ? (choice.isCorrect ? 'correct' : 'incorrect')
                     : ''
             };
         });
         this._ui.updateQuestionnaireStatus(this._questionnaire.status);
-        this._ui.updateUserAction(this._questionnaire.status === "pending" ? "next" : this._questionnaire.status);
         this._ui.updateAnswers(answers);
         this._ui.updateScore(this.score);
+        if (this._questionnaire.status === "failed") {
+            this._ui.updateUserAction("failed");
+            return;
+        }
+        if (this._questionnaire.status === "success") {
+            this._ui.updateUserAction("success");
+            return;
+        }
+        if (this.currentQuestion.answer.isCorrect === "no") {
+            this._ui.updateUserAction("wrong_attempt");
+            return;
+        }
+        if (this.currentQuestion.answer.isCorrect === "yes") {
+            this._ui.updateUserAction("next");
+            return;
+        }
     };
     Object.defineProperty(QuestionnairePresenter.prototype, "score", {
         get: function () {

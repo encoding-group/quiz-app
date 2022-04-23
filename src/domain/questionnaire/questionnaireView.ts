@@ -5,5 +5,7 @@ export interface QuestionnaireView {
     updateScore(score: number): void;
     updateTitle(title: string): void;
     updateQuestionnaireStatus(status: "pending" | "success" | "failed"): void;
-    updateUserAction(action: "pending" | "confirm" | "next" | "success" | "failed"): void;
+    updateUserAction(action: UserAction): void;
 }
+
+export type UserAction = "pending" | "confirm" | "next" | "wrong_attempt" | "success" | "failed";

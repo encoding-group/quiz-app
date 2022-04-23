@@ -15,7 +15,8 @@ export type {
 
 export {
     QuestionsRepository,
-    YamlQuestionsDataContext
+    QuestionPropsDataContext,
+    YamlQuestionsDataContext,
 } from "./infrastructure/persistence";
 
 export {
