@@ -1,316 +1,43 @@
 groups:
   -
-    title: Anmeldung in der Zentralen Meldestelle
+    title: Group 1
     questions:
       -
-        title: Dürfen Sie ohne Anmeldung in der Zentralen Meldestelle des Betriebs-Clusters Ihre Arbeit beginnen?
+        title: Question Title 1
         correctIndex: 1
         answers:
-          - Ja, wenn ich mich im Betrieb auskenne
-          - Nein, ohne Anmeldung ist es verboten mit der Arbeit zu beginnen
+          - A
+          - B
       -
-        title: Wann müssen Sie sich in der Zentralen Meldestelle des Betriebs-Clusters anmelden?
+        title: Question Title 2
         correctIndex: 1
         answers:
-          - Im Laufe des Arbeitstages
-          - Vor Arbeitsbeginn
+          - A
+          - B
       -
-        title: Wohin gehen Sie in der normalen Arbeitszeit, um sich anzumelden?
-        correctIndex: 0
+        title: Question Title 3
+        correctIndex: 1
         answers:
-          - In die zentrale Meldestelle des Betriebs-Clusters
-          - In das Betriebsbüro
+          - A
+          - B
   -
-    title: Sicherheitskurzunterweisung
+    title: Group 2
     questions:
       -
-        title: Wer sorgt für das Aufhängen der Meldekarte am hierfür vorgesehenen Meldekartenboard?
+        title: Question Title 1
         correctIndex: 1
         answers:
-          - Der Verantwortliche der Meldestelle übernimmt das Aufhängen der Meldekarte
-          - Für das Aufhängen der Meldekarte bin ich selbst verantwortlich
+          - A
+          - B
       -
-        title: Für welchen Zeitraum ist meine Sicherheitsunterweisung im Betriebs-Cluster gültig?
-        correctIndex: 0
-        answers:
-          - Diese ist ein Jahr gültig, hiernach muss ich den Test wiederholen
-          - Diese ist unbegrenzt gültig
-      -
-        title: Kann ohne erfolgreiche Beantwortung Ihrer persönlichen Verständnisfragen der Zutritt zum Betrieb verweigert werden?
-        correctIndex: 0
-        answers:
-          - Der Zutritt zum Betrieb kann mir verweigert werden
-          - Der Zutritt zum Betrieb kann mir nicht untersagt werden
-  -
-    title: Anmeldung/ Abmeldung
-    questions:
-      -
-        title: Welche Möglichkeit ist richtig, um sich im Betrieb richtig an- bzw. abzumelden?
+        title: Question Title 2
         correctIndex: 1
         answers:
-          - Ich informiere den Verantwortlichen im Betrieb telefonisch
-          - Ich nutze das Meldekartenboard zum Auf- und Abhängen meiner Meldekarte
+          - A
+          - B
       -
-        title: Müssen Sie sich extra im Betrieb abmelden, wenn Sie zur Pause nur kurz zum Bäcker gehen?
+        title: Question Title 3
         correctIndex: 1
         answers:
-          - Nein, bei nur kurzer Abwesenheit ist das kein Problem
-          - Ja, bei jedem Verlassen des Betriebsgeländes muss die Meldekarte abgehängt werden
-      -
-        title: Im Alarmfall werden Sie aufgefordert den Sammelplatz oder internen Schutzraum aufzusuchen, wie verhalten Sie sich richtig?
-        correctIndex: 0
-        answers:
-          - Ich suche unverzüglich den Sammelplatz oder den internen Schutzraum auf
-          - Ich hole zuerst meine Meldekarte vom Meldekartenboard und gehe dann zum Sammelplatz
-      -
-        title: Dürfen Sie ohne Anmeldung per Meldekarte den Anlagenbereich des Betriebsclusters betreten?
-        correctIndex: 0
-        answers:
-          - Ohne Anmeldung darf ich den Anlagenbereich des Betriebsclusters nicht betreten
-          - Wenn ich den Betrieb nur kurz betreten muss, geht das auch ohne Anmeldung
-      -
-        title: Wie verhalte ich mich richtig, wenn ich es vergessen haben sollte, meine Meldekarte vor dem Verlassen des Betriebes abzuhängen?
-        correctIndex: 0
-        answers:
-          - Ich rufe unverzüglich den Verantwortlichen der Meldestelle an bzw. informiere außerhalb der normalen Arbeitszeiten die Messwarte Betrieb XY. Die Telefonnummern finde ich im betrieblichen Merkblatt Betrieb XY.
-          - Ich muss nichts unternehmen, da nach Feierabend alle noch nicht abgehängten Meldekarten entsorgt werden.
-  -
-    title: Besondere Gefahrstoffe
-    questions:
-      -
-        title: Sind Arbeiten an Anlagenteilen ohne Arbeitserlaubnisschein erlaubt?
-        correctIndex: 1
-        answers:
-          - Arbeiten sind hier erlaubt
-          - Alle Arbeiten im Betriebs-Cluster Betrieb XY dürfen Sie nur mit der entsprechenden Erlaubnis über einen Arbeitserlaubnisschein durchführen
-      -
-        title: Gibt es Festlegungen zu Schutz- und Verhaltensmaßnahmen für Arbeit mit besonderen Gefahrstoffen?
-        correctIndex: 1
-        answers:
-          - Nein, dazu gibt es keine Festlegungen
-          - Ja, im Erlaubnisschein gibt es dazu Festlegungen
-  -
-    title: Sicherheitseinrichtungen
-    questions:
-      -
-        title: Müssen Sie vor Arbeitsbeginn wissen, wo sich die Standorte der Sammelplätze, die bei Alarm im Betrieb aufzusuchen sind, befinden?
-        correctIndex: 0
-        answers:
-          - Über die Standorte muss ich mich vor Arbeitsbeginn informieren
-          - Es reicht aus, wenn ich mich im Alarmfall daran orientiere, wo alle anderen hingehen
-      -
-        title: Müssen Sie vor Arbeitsbeginn wissen, wo sich Not- und Augenbrausen befinden?
-        correctIndex: 0
-        answers:
-          - Über die Standorte muss ich mich vor Arbeitsbeginn informieren
-          - Das ist nicht erforderlich, da Not- und Augenbrausen nur nach Erlaubnis des Verantwortlichen der Meldestelle benutzt werden dürfen
-  -
-    title: Persönliche Schutzausrüstung
-    questions:
-      -
-        title: Wie müssen Sie sich verhalten, wenn Ihnen die Persönliche Schutzausrüstung (PSA) fehlt?
-        correctIndex: 0
-        answers:
-          - Ohne die im Arbeitserlaubnisschein angegebene PSA darf ich die Arbeit nicht ausführen
-          - Ich muss ohne die PSA besonders vorsichtig arbeiten
-  -
-    title: Erlaubnisscheine/ Gefährdungsbeurteilung
-    questions:
-      -
-        title: Wer dokumentiert im Erlaubnisschein die Gefährdungen?
-        correctIndex: 1
-        answers:
-          - Die Zentralabteilung Arbeitssicherheit am Standort Ludwigshafen
-          - Der Verantwortliche Mitarbeiter der Meldestelle des Betriebs-Clusters Betrieb XY
-      -
-        title: Können Sie während der Sicherheitsabsprache den ausgefüllten Erlaubnisschein auf Plausibilität und Verständlichkeit prüfen?
-        correctIndex: 0
-        answers:
-          - Ja, solch eine Prüfung ist sogar meine Pflicht
-          - Nein, denn die Verantwortlichen im Betrieb sind hierfür alleine zuständig
-      -
-        title: Muss ein Erlaubnisschein von Verantwortlichen des Betriebes freigegeben sein?
-        correctIndex: 1
-        answers:
-          - Nein, wichtiger als eine Unterschrift sind klare Erklärungen vom Verantwortlichen
-          - Ja, ein Erlaubnisschein muss von Verantwortlichen des Betriebes freigegeben sein
-      -
-        title: Was ist bei der Sicherheitsabsprache zu tun, wenn auf einem Erlaubnisschein die Unterschriften vom Betrieb fehlen?
-        correctIndex: 0
-        answers:
-          - Die Unterschriften der Verantwortlichen des Betriebes sind vor Arbeitsbeginn notwendig
-          - Wenn alles verstanden wurde, kann die Arbeit ohne Unterschriften starten
-      -
-        title: Dürfen Sie ihre Arbeit beginnen, wenn im Erlaubnisschein das Datum fehlt?
-        correctIndex: 0
-        answers:
-          - Nein, ein Erlaubnisschein - als Basis für meine Arbeit - muss immer ein Datum haben
-          - Ja, ich kann die Arbeit aufnehmen, da das Datum nicht entscheidend ist
-      -
-        title: Wer muss Erlaubnisscheine - neben den Verantwortlichen des Betriebes - unterschreiben?
-        correctIndex: 1
-        answers:
-          - Es sind keine weiteren Unterschriften notwendig
-          - Der berechtigte Ausführende muss den Erlaubnisschein unterschreiben
-      -
-        title: Wann darf mit den Arbeiten vor Ort begonnen werden?
-        correctIndex: 1
-        answers:
-          - Wenn über Gefährdungen und dazugehörige Sicherheitsmaßnahmen gesprochen wurde
-          - Nach der Sicherheitsabsprache vor Ort und dem vollständig ausgefüllten Arbeitserlaubnisschein
-      -
-        title: Sie sind im Besitz eines unterschriebenen, gültigen, Erlaubnisscheines. Wann müssen Sie trotzdem ihre Tätigkeit vor Ort sofort abbrechen?
-        correctIndex: 1
-        answers:
-          - Gar nicht, mit einem gültigen Erlaubnisschein darf ich arbeiten, bis die Tätigkeit beendet ist
-          - Im Alarmfall für die gesamte Dauer des Alarmes und bei Abweichungen von den getroffenen Absprachen
-      -
-        title: Wann dürfen Sie im Betrieb Aufzüge mit offener Schachtwand benutzen?
-        correctIndex: 1
-        answers:
-          - Wenn ich ausreichend Erfahrung besitze
-          - Nur nach Einweisung durch den Betrieb Betrieb XY und meiner Unterschrift hierzu
-      -
-        title: Wann dürfen Sie im Betrieb Rolltore öffnen?
-        correctIndex: 1
-        answers:
-          - Wenn ich ausreichend Erfahrung besitze
-          - Nur nach Einweisung durch den Betrieb Betrieb XY und meiner Unterschrift hierzu
-  -
-    title: Zusätzliche PSA
-    questions:
-      -
-        title: Wer stellt zusätzliche Persönliche Schutzausrüstung bei Bedarf zur Verfügung?
-        correctIndex: 0
-        answers:
-          - Der Betriebs-Cluster Betrieb XY stellt zusätzlich benötigte PSA zur Verfügung
-          - Das Kontraktorenmanagement stellt zusätzliche PSA zur Verfügung
-  -
-    title: Abweichungen von Sicherheitsabsprachen und bestimmungsgemäßen Abläufen
-    questions:
-      -
-        title: Was ist zu tun, wenn Sie verstärkten Geruch wahrnehmen?
-        correctIndex: 0
-        answers:
-          - Tätigkeit sofort unterbrechen und den Vorfall dem Betrieb melden
-          - Zunächst versuche ich zu klären, wo genau der Gasgeruch herkommt
-      -
-        title: Wenn - abweichend von bestimmungsgemäßen Abläufen vor Ort - bei Ihrer Arbeit plötzlich eine Flüssigkeit austritt, was ist zu tun?
-        correctIndex: 0
-        answers:
-          - Tätigkeit sofort unterbrechen und den Vorfall melden
-          - Wenn nicht mit stärkerem Flüssigkeitsaustritt zu rechnen ist, kann ich weiterarbeiten
-      -
-        title: Was ist zu tun, wenn Sie unsichere Zustände wahrnehmen?
-        correctIndex: 1
-        answers:
-          - Ich versuche sichere Zustände zu schaffen
-          - Tätigkeit sofort unterbrechen und den Betrieb informieren
-      -
-        title: Wer entscheidet, falls es Abweichungen zu bestimmungsgemäßen Abläufen vor Ort gibt, was dann zu tun ist?
-        correctIndex: 0
-        answers:
-          - Der Verantwortliche des Betriebs-Clusters Betrieb XY
-          - Der Kollege, der mit der Arbeit vor Ort betraut ist
-      -
-        title: Was tun Sie, wenn die vereinbarte Arbeit gemäß Erlaubnisschein erledigt ist?
-        correctIndex: 1
-        answers:
-          - Ich räume mein Handwerkzeug zusammen und verlasse den Betrieb
-          - Ich informiere den Verantwortlichen des Betriebes vom Abschluss der Arbeit
-      -
-        title: Wodurch wird der Abschluss der Arbeiten dokumentiert?
-        correctIndex: 1
-        answers:
-          - Dadurch, dass sich keine Werkzeuge mehr im Arbeitsbereich befinden
-          - Durch Unterschrift Fertigmeldung des Ausführenden an den Betrieb, im Erlaubnisschein
-  -
-    title: Verhalten im Alarmfall
-    questions:
-      -
-        title: Wie erfolgt im Betrieb die Alarmauslösung?
-        correctIndex: 1
-        answers:
-          - Durch Handyanruf
-          - Über „Typhonton“ oder über Lautsprecher mit einem „Jodelton“ und Ansagen
-      -
-        title: Wie müssen Sie sich beim Jodelton-Alarm verhalten?
-        correctIndex: 1
-        answers:
-          - Sofort zum nächsten Sammelplatz laufen
-          - Arbeiten unterbrechen, Arbeitsplatz sichern, auf Lautsprecherdurchsagen achten
-      -
-        title: Was ist bei einem Typhon-Alarm zu tun?
-        correctIndex: 0
-        answers:
-          - Der Aufenthaltsbereich ist unverzüglich zu verlassen
-          - Die wichtigsten angefangenen Arbeiten müssen noch beendet werden
-      -
-        title: Müssen Sie im Alarmfall, um schneller laufen zu können, zusätzliche Persönliche Schutzausrüstung am Arbeitsplatz ausziehen?
-        correctIndex: 1
-        answers:
-          - Ja
-          - Nein
-      -
-        title: Auf welche Weise versuchen Sie im Alarmfall mit Typhon den Sammelplatz zu erreichen?
-        correctIndex: 1
-        answers:
-          - Ich renne so schnell ich kann und nehme, wenn möglich, den nächstgelegenen Fahrstuhl
-          - Ich renne nicht, nutze keinen Fahrstuhl, nutze nur Treppen auf sichere Weise und nutze den kürzesten Weg zum nächsten Ausgang
-      -
-        title: Muss ich im Alarmfalle zuerst meine Meldekarte in der Meldestelle abholen, bevor ich den Sammelplatz aufsuche?
-        correctIndex: 0
-        answers:
-          - Nein, ich begebe mich unverzüglich zum Sammelplatz
-          - Ja
-      -
-        title: Wie wird im Alarmfalle die Anwesenheit festgestellt?
-        correctIndex: 0
-        answers:
-          - Ein Betriebsmitarbeiter bringt alle Meldekarten zum Sammelplatz mit, dort findet dann der Abgleich zur Anwesenheit statt
-          - Die Feuerwehr prüft über einen Rundgang, wer ggf. noch im Gebäude ist
-      -
-        title: Wann können Sie bei Alarm den Sammelplatz wieder verlassen und zum Arbeitsplatz zurückkehren?
-        correctIndex: 1
-        answers:
-          - Wenn der Typhon-Alarm abgestellt wurde
-          - Wenn die Anweisung dazu vom Betriebsverantwortlichen des Betriebs-Clusters Betrieb XY erfolgt
-  -
-    title: Verbote und Gebote
-    questions:
-      -
-        title: Dürfen Sie im Betrieb Armaturen öffnen und schließen?
-        correctIndex: 1
-        answers:
-          - Dies ist nur dann erlaubt, wenn es kurz stattfindet und wieder rückgängig gemacht wird
-          - Nein, Das ist strikt verboten
-      -
-        title: Dürfen Sie im Betrieb Feuerzeuge mitführen?
-        correctIndex: 0
-        answers:
-          - Nein, das Mitführen von Feuerzeugen aller Art ist verboten
-          - Ja, es darf aber nicht benutzt werden
-      -
-        title: Dürfen Sie im Betrieb ihr Nicht-Ex-Handy benutzen?
-        correctIndex: 0
-        answers:
-          - Nein, im Betrieb ist nur das Mitführen und der Gebrauch von EX-geschützten Handys erlaubt
-          - Ja, das ist möglich
-      -
-        title: Darf ich im Betriebs-Cluster Betrieb XY Aufzüge mit offener Schachtwand benutzen?
-        correctIndex: 0
-        answers:
-          - Nur nach Einweisung durch den Betrieb Betrieb XY und meiner Unterschrift hierzu, aber niemals im Alarmfall
-          - Grundsätzlich immer, nur nicht im Alarmfall
-      -
-        title: Wo befindet sich im Betriebs-Cluster BETRIEB XY ein sogenannter EX-Bereich?
-        correctIndex: 0
-        answers:
-          - Der gesamte Betriebs-Cluster ist ein EX-Bereich, in dem besondere Regeln gelten und ein Feuererlaubnisschein für Feuerarbeiten benötigt wird
-          - Nur um Elektromotoren herum im Radius eines Meters befinden sind in Betrieb XY EX-Bereiche
-      -
-        title: Darf ich trotz aufgehängter Meldekarte alle Bereiche im Betriebs-Cluster Betrieb XY betreten?
-        correctIndex: 0
-        answers:
-          - Nein, gesondert gekennzeichnete Bereiche, wie z.B. abgesperrte Bereiche dürfen nur nach entsprechender Erlaubnis durch das Betriebspersonal betreten werden
-          - Ja
+          - A
+          - B
