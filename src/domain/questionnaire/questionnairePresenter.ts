@@ -1,4 +1,4 @@
-import {Answer, AnswerViewModel, Question, Questionnaire, QuestionnaireView, Choice} from "./index";
+import {Answer, AnswerViewModel, Question, Questionnaire, QuestionnaireView, Choice} from ".";
 
 export class QuestionnairePresenter {
     private _questionnaire: Questionnaire;
