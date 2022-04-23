@@ -1,4 +1,5 @@
-import {AnswerViewModel} from "./index";
+import {AnswerViewModel} from ".";
+import {UserAction} from "./questionnaire.types";
 
 export interface QuestionnaireView {
     updateAnswers(answers: AnswerViewModel[]): void;
@@ -7,5 +8,3 @@ export interface QuestionnaireView {
     updateQuestionnaireStatus(status: "pending" | "success" | "failed"): void;
     updateUserAction(action: UserAction): void;
 }
-
-export type UserAction = "pending" | "confirm" | "next" | "wrong_attempt" | "success" | "failed";

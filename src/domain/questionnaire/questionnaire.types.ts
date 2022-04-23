@@ -21,3 +21,7 @@ export type QuestionProps = {
     correctAnswerIndex: number;
     answers: string[];
 }
+
+export type UserAction = "pending" | "confirm" | "next" | "wrong_attempt" | "success" | "failed";
+
+export type QuestionnaireStatus = "pending" | "success" | "failed";
