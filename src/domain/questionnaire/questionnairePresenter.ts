@@ -7,9 +7,14 @@ export class QuestionnairePresenter {
     constructor(questionnaire: Questionnaire, ui: QuestionnaireView) {
         this._questionnaire = questionnaire;
         this._ui = ui;
+
+        this._ui.onStart = () => this.start();
+        this._ui.onSelectAnswer = (index: number) => this.selectAnswer(index);
+        this._ui.onConfirmAnswer = () => this.confirmAnswer();
+        this._ui.onNextQuestion = () => this.nextQuestion();
     }
 
-    public start(): void {
+    private start(): void {
         const answers = this.currentQuestion.choices.map((choice: Choice): AnswerViewModel => {
             return {
                 state: 'default',
@@ -25,7 +30,7 @@ export class QuestionnairePresenter {
         this._ui.updateUserAction("pending");
     }
 
-    public nextQuestion(): void {
+    private nextQuestion(): void {
         this._questionnaire.next();
 
         const answers = this.currentQuestion.choices.map((choice: Choice): AnswerViewModel => {
@@ -42,7 +47,7 @@ export class QuestionnairePresenter {
         this._ui.updateUserAction("pending");
     }
 
-    public selectAnswer(answerIndex: number): void {
+    private selectAnswer(answerIndex: number): void {
         this._questionnaire.selectAnswer(answerIndex);
 
         const answers = this.currentQuestion.choices.map((choice: Choice, index: number): AnswerViewModel => {
@@ -57,7 +62,7 @@ export class QuestionnairePresenter {
         this._ui.updateUserAction("confirm");
     }
 
-    public confirmAnswer(): void {
+    private confirmAnswer(): void {
         this._questionnaire.confirmAnswer();
 
         const answers = this.currentQuestion.choices.map((choice: Choice, index: number): AnswerViewModel => {

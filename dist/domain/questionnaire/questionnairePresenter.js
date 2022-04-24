@@ -1,7 +1,12 @@
 var QuestionnairePresenter = /** @class */ (function () {
     function QuestionnairePresenter(questionnaire, ui) {
+        var _this = this;
         this._questionnaire = questionnaire;
         this._ui = ui;
+        this._ui.onStart = function () { return _this.start(); };
+        this._ui.onSelectAnswer = function (index) { return _this.selectAnswer(index); };
+        this._ui.onConfirmAnswer = function () { return _this.confirmAnswer(); };
+        this._ui.onNextQuestion = function () { return _this.nextQuestion(); };
     }
     QuestionnairePresenter.prototype.start = function () {
         var answers = this.currentQuestion.choices.map(function (choice) {

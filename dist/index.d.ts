@@ -2,3 +2,4 @@ export { Question, Questionnaire, QuestionnairePresenter, QuestionnaireView } fr
 export type { Answer, AnswerViewModel, QuestionnaireRules, QuestionProps } from "./domain/questionnaire";
 export { QuestionsRepository, QuestionPropsDataContext, YamlQuestionsDataContext, } from "./infrastructure/persistence";
 export { EvenlyDistributedByGroup } from "./infrastructure/services";
+export { viewBuilder } from "./infrastructure/viewBuilder";
