@@ -18,3 +18,5 @@ export declare type QuestionProps = {
     correctAnswerIndex: number;
     answers: string[];
 };
+export declare type UserAction = "pending" | "confirm" | "next" | "wrong_attempt" | "success" | "failed";
+export declare type QuestionnaireStatus = "pending" | "success" | "failed";

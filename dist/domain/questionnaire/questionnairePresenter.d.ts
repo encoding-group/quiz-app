@@ -1,4 +1,4 @@
-import { Questionnaire, QuestionnaireView } from "./index";
+import { Questionnaire, QuestionnaireView } from ".";
 export declare class QuestionnairePresenter {
     private _questionnaire;
     private _ui;

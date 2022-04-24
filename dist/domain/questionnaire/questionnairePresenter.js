@@ -13,6 +13,7 @@ var QuestionnairePresenter = /** @class */ (function () {
         });
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
+        this._ui.unlockAnswerSelection();
         this._ui.updateScore(this.score);
         this._ui.updateUserAction("pending");
     };
@@ -27,6 +28,7 @@ var QuestionnairePresenter = /** @class */ (function () {
         });
         this._ui.updateTitle(this._questionnaire.currentQuestion.title);
         this._ui.updateAnswers(answers);
+        this._ui.unlockAnswerSelection();
         this._ui.updateUserAction("pending");
     };
     QuestionnairePresenter.prototype.selectAnswer = function (answerIndex) {
@@ -56,8 +58,8 @@ var QuestionnairePresenter = /** @class */ (function () {
                     : ''
             };
         });
-        this._ui.updateQuestionnaireStatus(this._questionnaire.status);
         this._ui.updateAnswers(answers);
+        this._ui.lockAnswerSelection();
         this._ui.updateScore(this.score);
         if (this._questionnaire.status === "failed") {
             this._ui.updateUserAction("failed");

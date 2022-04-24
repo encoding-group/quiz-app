@@ -7,4 +7,6 @@ export interface QuestionnaireView {
     updateTitle(title: string): void;
     updateQuestionnaireStatus(status: "pending" | "success" | "failed"): void;
     updateUserAction(action: UserAction): void;
+    lockAnswerSelection(): void;
+    unlockAnswerSelection(): void;
 }
