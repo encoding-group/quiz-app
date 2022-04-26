@@ -1,5 +1,5 @@
 import {QuestionProps} from "../../domain/questionnaire";
-import {QuestionsDataContext} from "./questionsDataContext";
+import {QuestionsDataContext, convertToQuestionProperties} from "./questionsDataContext";
 import {parse} from "yaml";
 
 export class YamlQuestionsDataContext implements QuestionsDataContext {
@@ -11,25 +11,6 @@ export class YamlQuestionsDataContext implements QuestionsDataContext {
         this._questions = [];
 
         this.restore();
-    }
-
-    private convertToQuestionProperties(intermediate: any): QuestionProps[] {
-        return intermediate.groups
-            .reduce((acc: any[], cur: any) => {
-                const groupName: string = cur.title;
-                const groupQuestions: any[] = cur.questions;
-                groupQuestions.forEach(question => question['group'] = groupName);
-
-                return [...acc, groupQuestions];
-            }, [])
-            .flat()
-            .map((questionData: any, index: number): QuestionProps => ({
-                id: index + 1,
-                title: questionData.title,
-                category: questionData.group,
-                correctAnswerIndex: questionData.correctIndex,
-                answers: questionData.answers
-            }));
     }
 
     getQuestions(): QuestionProps[] {
@@ -46,6 +27,6 @@ export class YamlQuestionsDataContext implements QuestionsDataContext {
     }
 
     restore(): void {
-        this._questions = this.convertToQuestionProperties(parse(this._rawContent));
+        this._questions = convertToQuestionProperties(parse(this._rawContent));
     }
 }

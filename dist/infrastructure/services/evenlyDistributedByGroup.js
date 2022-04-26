@@ -1,4 +1,7 @@
-import { Question } from "../../domain/questionnaire";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvenlyDistributedByGroup = void 0;
+var questionnaire_1 = require("../../domain/questionnaire");
 var EvenlyDistributedByGroup = /** @class */ (function () {
     function EvenlyDistributedByGroup(repository) {
         this._repository = repository;
@@ -19,8 +22,8 @@ var EvenlyDistributedByGroup = /** @class */ (function () {
             });
         }
         this._repository.restore();
-        return questions.map(function (props) { return new Question(props); });
+        return questions.map(function (props) { return new questionnaire_1.Question(props); });
     };
     return EvenlyDistributedByGroup;
 }());
-export { EvenlyDistributedByGroup };
+exports.EvenlyDistributedByGroup = EvenlyDistributedByGroup;

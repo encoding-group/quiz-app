@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Questionnaire = void 0;
 var Questionnaire = /** @class */ (function () {
     function Questionnaire(logic, questions) {
         this._score = 0;
@@ -81,4 +84,4 @@ var Questionnaire = /** @class */ (function () {
     };
     return Questionnaire;
 }());
-export { Questionnaire };
+exports.Questionnaire = Questionnaire;

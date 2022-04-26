@@ -1,0 +1,29 @@
+config:
+  questions: questions.yml
+  translations: translations.yml
+  video: video.mp4
+  password: '' # To disable the password, leave it empty.
+  version: '2022-1'
+  showQuestionsOnPrintCertificate: false
+
+project:
+  company: Name des Betriebs
+  title: Sicherheitsunterweisung Alpinsäure-Fabrik
+  name: Sicherheitsunterweisung und Verständnisüberprüfung
+
+design:
+  logo: logo.svg
+  visual: visual.png
+  colors:
+    background: '#FFFFFF'
+    backgroundSoft: '#EEEEEE'
+    text: '#1B1B1B'
+    textSoft: '#222222'
+    correct: '#46C84B'
+    incorrect: '#EB4E44'
+    accent: '#004A96'
+
+logic:
+  group_instructions: true
+  min_correct_answers: 5
+  max_incorrect_answers: 3

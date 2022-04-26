@@ -1,0 +1,12 @@
+project:
+  company: Company 2
+  title: Title 2
+  name: Name 2
+
+design:
+  colors:
+    background: '#000000'
+
+logic:
+  min_correct_answers: 12
+  max_incorrect_answers: 4

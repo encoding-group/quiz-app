@@ -1,4 +1,7 @@
-import { Answer } from "./answer";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Question = void 0;
+var answer_1 = require("./answer");
 var Question = /** @class */ (function () {
     function Question(questionProps) {
         this._id = questionProps.id;
@@ -6,7 +9,7 @@ var Question = /** @class */ (function () {
         this._correctAnswerIndex = questionProps.correctAnswerIndex;
         this._choices = questionProps.answers;
         this._selectedAnswerIndex = -1;
-        this._answer = new Answer(this._selectedAnswerIndex, this._correctAnswerIndex);
+        this._answer = new answer_1.Answer(this._selectedAnswerIndex, this._correctAnswerIndex);
     }
     Object.defineProperty(Question.prototype, "id", {
         get: function () {
@@ -46,8 +49,8 @@ var Question = /** @class */ (function () {
         this._selectedAnswerIndex = answerIndex;
     };
     Question.prototype.confirmAnswer = function () {
-        this._answer = new Answer(this._selectedAnswerIndex, this._correctAnswerIndex);
+        this._answer = new answer_1.Answer(this._selectedAnswerIndex, this._correctAnswerIndex);
     };
     return Question;
 }());
-export { Question };
+exports.Question = Question;

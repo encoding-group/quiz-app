@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionPropsDataContext = void 0;
 var QuestionPropsDataContext = /** @class */ (function () {
     function QuestionPropsDataContext(questionsProps) {
         this._propsRaw = questionsProps;
@@ -18,4 +21,4 @@ var QuestionPropsDataContext = /** @class */ (function () {
     };
     return QuestionPropsDataContext;
 }());
-export { QuestionPropsDataContext };
+exports.QuestionPropsDataContext = QuestionPropsDataContext;

@@ -4,3 +4,4 @@ export interface QuestionsDataContext {
     deleteQuestionById(id: number): void;
     restore(): void;
 }
+export declare function convertToQuestionProperties(intermediate: any): QuestionProps[];

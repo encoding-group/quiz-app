@@ -1,71 +1,17 @@
-import {
-    Question,
-    QuestionProps,
-    Questionnaire,
-    QuestionnaireView,
-    QuestionnairePresenter,
-} from "../src";
-import {MockProxy, mock} from "jest-mock-extended";
+import {QuizConfiguration} from "../src";
+import * as path from "path";
+import * as fs from "fs";
+import {parse} from "yaml";
 
-describe('configuration dto', () => {
-    let questionnaire: Questionnaire;
-    let mockUi: MockProxy<QuestionnaireView>;
+describe('configuration', () => {
+    test('', () => {
+        const config1 = fs.readFileSync(path.resolve(__dirname, 'data', 'testConfig1.yml'), 'utf-8');
+        const config2 = fs.readFileSync(path.resolve(__dirname, 'data', 'testConfig2.yml'), 'utf-8');
 
-    beforeEach(() => {
-        mockUi = mock<QuestionnaireView>();
+        const settings = new QuizConfiguration();
+        settings.add('', parse(config1));
+        settings.add('', parse(config2));
 
-        const questions: Question[] = [1,2,3,4,5,6]
-            .map((id: number): QuestionProps => {
-                return {
-                    id,
-                    title: `Question ${id}`,
-                    category: `Category ${id % 3}`,
-                    correctAnswerIndex: id % 2,
-                    answers: ['Answer 1', 'Answer 2']
-                }
-            })
-            .map((props: QuestionProps) => new Question(props));
-
-        const logic = {
-            groupInstruction: true,
-            correctAnswersMinimum: 5,
-            incorrectAnswersMaximum: 3
-        };
-
-        questionnaire = new Questionnaire(logic, questions);
+        console.log(settings.getRegex(/design.*/g))
     });
-
-    test('should create and show a question', () => {
-        const viewModel = new QuestionnairePresenter(questionnaire, mockUi);
-        viewModel.start();
-
-        expect(mockUi.updateTitle).toHaveBeenCalledWith('Question 1');
-        expect(mockUi.updateAnswers).toHaveBeenCalled()
-    });
-
-    test('should select the answer of the first question', () => {
-        const viewModel = new QuestionnairePresenter(questionnaire, mockUi);
-        viewModel.start();
-        viewModel.selectAnswer(0);
-
-        expect(mockUi.updateAnswers).toHaveBeenCalledTimes(2);
-    });
-
-    // test('should confirm the answer of the first question', () => {
-    //     questionnaire.start();
-    //
-    //     questionnaire.selectAnswer(0);
-    //     questionnaire.confirmAnswer();
-    //     expect(ui.confirmedAnswer).toBe(0)
-    //     expect(ui.options[0].isCorrect).toBeTruthy();
-    //     expect(ui.options[1].isCorrect).toBeFalsy();
-    //     expect(ui.answeredCorrectly).toBeTruthy();
-    //
-    //     questionnaire.selectAnswer(1);
-    //     questionnaire.confirmAnswer();
-    //     expect(ui.confirmedAnswer).toBe(1)
-    //     expect(ui.options[0].isCorrect).toBeTruthy();
-    //     expect(ui.options[1].isCorrect).toBeFalsy();
-    //     expect(ui.answeredCorrectly).toBeFalsy();
-    // });
 });

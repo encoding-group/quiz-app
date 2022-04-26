@@ -1,4 +1,11 @@
-export { Answer } from "./answer";
-export { Question } from "./question";
-export { Questionnaire } from "./questionnaire";
-export { QuestionnairePresenter } from "./questionnairePresenter";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionnairePresenter = exports.Questionnaire = exports.Question = exports.Answer = void 0;
+var answer_1 = require("./answer");
+Object.defineProperty(exports, "Answer", { enumerable: true, get: function () { return answer_1.Answer; } });
+var question_1 = require("./question");
+Object.defineProperty(exports, "Question", { enumerable: true, get: function () { return question_1.Question; } });
+var questionnaire_1 = require("./questionnaire");
+Object.defineProperty(exports, "Questionnaire", { enumerable: true, get: function () { return questionnaire_1.Questionnaire; } });
+var questionnairePresenter_1 = require("./questionnairePresenter");
+Object.defineProperty(exports, "QuestionnairePresenter", { enumerable: true, get: function () { return questionnairePresenter_1.QuestionnairePresenter; } });

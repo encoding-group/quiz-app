@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Answer = void 0;
 var Answer = /** @class */ (function () {
     function Answer(givenAnswerIndex, correctAnswerIndex) {
         this._givenAnswerIndex = givenAnswerIndex;
@@ -21,4 +24,4 @@ var Answer = /** @class */ (function () {
     });
     return Answer;
 }());
-export { Answer };
+exports.Answer = Answer;

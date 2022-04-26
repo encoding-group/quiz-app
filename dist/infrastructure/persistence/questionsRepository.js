@@ -1,3 +1,4 @@
+"use strict";
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
@@ -23,6 +24,8 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionsRepository = void 0;
 var QuestionsRepository = /** @class */ (function () {
     function QuestionsRepository(context) {
         this._context = context;
@@ -51,4 +54,4 @@ var QuestionsRepository = /** @class */ (function () {
     };
     return QuestionsRepository;
 }());
-export { QuestionsRepository };
+exports.QuestionsRepository = QuestionsRepository;
